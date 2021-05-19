@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+    max-width: 1100px;
+    margin: auto;
+    padding: 15px 10px;
+}
+/* Top Nav Styles */
+#topnav{
+    min-height: 20px;
+    background-color: black;
+}
+
+
+/* Header Styles */
+header{
+    min-height: 50px;
+    background-color: white;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.281);
+    z-index: 2000;
+    position: sticky;
+    top: 0;
+}
+#logo_div{
+    min-height: 20px;
+    flex: 1;
+}
+#logo_div img{
+   max-height: 40px; 
+}
+#navbar{
+    min-height: 20px;
+    flex: 3;
+    text-align: right;
+}
+#navbar ul li{
+    list-style-type: none;
+    display: inline-block;
+}
+#navbar ul li a{
+    text-decoration: none;
+    color: rgb(26, 25, 25);
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: all 0.2s linear;
+}
+#navbar ul li:not(:last-child) a:hover{
+    background-color: #fd4d50;
+    color: white;
+}
+#navbar ul li span{
+    margin-left: 15px;
+}
+#nav-toggler{
+    float: right;
+    font-size: 1.5rem;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.281);
+    padding: 5px 10px;
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width: 840px) {
+    .container{
+        display: block;
+    }
+}
+@media (max-width: 767px) {
+    #navbar{
+        display: none;
+        text-align: left;
+    }
+    #navbar ul li{
+        display: block;
+    }
+    #nav-toggler{
+        display: block;
+    }
+    #navbar ul li a{
+        display: block;
+        padding: 10px 15px;
+    }
+    .open{
+        display: block !important;
+    }
+}
+
+
+/* Home Banner */
+#banner{
+    min-height: 400px;
+    background-color: lightgray;
+}
